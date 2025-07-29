@@ -1,13 +1,12 @@
 body {
     background-color: #eee;
+    margin: 0rem;
 }
 
 .whole-form {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
     padding: 1rem;
-    border-radius: 1rem;
     width: 20rem;
     gap: 1rem;
     justify-content: center;
@@ -83,4 +82,26 @@ body {
 .reset-button {
     font-size: 1.1rem;
     background-color: white;
+}
+
+.sidebar {
+    background-color: rgb(188, 188, 249);
+}
+
+.site-container {
+    display: grid;
+    grid-template: 1fr / 1fr 6fr;
+}
+
+.username-section {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.projects-section {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 5rem;
+    cursor: pointer;
 }
