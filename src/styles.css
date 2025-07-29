@@ -1,3 +1,55 @@
 * {
     background-color: #eee;
 }
+
+.whole-form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+}
+
+.title-section>label,
+.date-section>label,
+.description-section>label {
+    font-size: 1.2rem;
+}
+
+.title-section>input,
+.date-section>input {
+    border: 1px solid black;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+.description-section>textarea {
+    border: 1px solid black;
+    font-size: .9rem;
+}
+
+.date-section {
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+}
+
+.urgency-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.whole-form>h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
