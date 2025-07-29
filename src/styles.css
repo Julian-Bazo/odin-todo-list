@@ -74,8 +74,13 @@ body {
     font-weight: lighter;
 }
 
+.button-section {
+    display: flex;
+    gap: 1rem;
+}
 
-.submit-button {
+.submit-button,
+.reset-button {
     font-size: 1.1rem;
     background-color: white;
 }

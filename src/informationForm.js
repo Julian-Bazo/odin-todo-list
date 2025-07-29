@@ -26,6 +26,10 @@ export default function gatherInformation() {
     urgencySection.classList.add("urgency-section");
     mainForm.appendChild(urgencySection);
 
+    const buttonSection = document.createElement("div");
+    buttonSection.classList.add("button-section");
+    mainForm.appendChild(buttonSection);
+
     // Labels and inputs
     const getTitle = document.createElement("input");
     getTitle.name = "title";
@@ -83,6 +87,14 @@ export default function gatherInformation() {
     const submitButton = document.createElement("button");
     submitButton.textContent = "Add Item";
     submitButton.classList.add("submit-button");
-    mainForm.appendChild(submitButton);
+    buttonSection.appendChild(submitButton);
+
+    const resetButton = document.createElement("button");
+    resetButton.textContent = "Clear";
+    resetButton.classList.add("reset-button");
+    buttonSection.appendChild(resetButton);
+    resetButton.type = "reset";
+
+
 
 }
