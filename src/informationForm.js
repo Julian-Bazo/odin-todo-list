@@ -1,5 +1,3 @@
-export default function gatherInformation() {
-    
     const contentContainer = document.querySelector(".content");
     
     const mainForm = document.createElement("form");
@@ -95,6 +93,4 @@ export default function gatherInformation() {
     buttonSection.appendChild(resetButton);
     resetButton.type = "reset";
 
-
-
-}
+    export { resetButton, submitButton, urgencyLabel, getUrgency, descriptionLabel, getDescription, dateLabel, getDate, titleLabel, getTitle, buttonSection, urgencySection, dateSection, titleSection, descriptionSection, formHeader};
