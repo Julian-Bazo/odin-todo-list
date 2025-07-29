@@ -32,7 +32,7 @@ export default function gatherInformation() {
     getTitle.id = "title";
     const titleLabel = document.createElement("label");
     titleLabel.for = "title";
-    titleLabel.textContent = "Task Name: ";
+    titleLabel.textContent = "*Task Name: ";
     getTitle.type = "text";
     getTitle.placeholder = "List Item";
 
@@ -44,7 +44,7 @@ export default function gatherInformation() {
     getDate.id = "date";
     const dateLabel = document.createElement("label");
     dateLabel.for = "date";
-    dateLabel.textContent = "Due Date: ";
+    dateLabel.textContent = "*Date: ";
     getDate.type = "text";
     getDate.placeholder = "MM/DD";
 
@@ -66,6 +66,7 @@ export default function gatherInformation() {
     getUrgency.type = "checkbox";
     getUrgency.name = "urgent";
     getUrgency.id = "urgent";
+    getUrgency.value = "urgent";
 
     const urgencyLabel = document.createElement("label");
     urgencyLabel.for = "urgency";
@@ -78,5 +79,10 @@ export default function gatherInformation() {
     descriptionSection.appendChild(getDescription);
 
     contentContainer.appendChild(mainForm);
+
+    const submitButton = document.createElement("button");
+    submitButton.textContent = "Add Item";
+    submitButton.classList.add("submit-button");
+    mainForm.appendChild(submitButton);
 
 }
