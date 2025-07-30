@@ -105,3 +105,14 @@ body {
     margin-top: 5rem;
     cursor: pointer;
 }
+
+.content-list-area {
+    display: flex;
+}
+
+.list {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}

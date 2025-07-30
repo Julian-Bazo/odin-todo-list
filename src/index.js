@@ -3,8 +3,9 @@ import "./styles.css";
 import Task from "./taskcreator.js";
 import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle} from "./informationForm.js";
 import { projectsSection } from "./projectSidebar.js";
+import listCreator from "./listCreator.js";
 
-createSidebar();
+listCreator();
 
 const firstTask = new Task("Go to the mall", "Tomorrow");
 firstTask.setDescription("I have to buy eggs");
