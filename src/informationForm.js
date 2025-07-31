@@ -84,6 +84,7 @@
 
     const submitButton = document.createElement("button");
     submitButton.textContent = "Add Item";
+    submitButton.type = "button";
     submitButton.classList.add("submit-button");
     buttonSection.appendChild(submitButton);
 

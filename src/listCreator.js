@@ -3,8 +3,6 @@ export default function createList() {
 
     const wholeList = document.querySelector(".list");
 
-    const listArray = [];
-
     const sampleTask = new Task("Grab eggs", "04/23");
     listArray.push(sampleTask);
 
@@ -29,3 +27,7 @@ export default function createList() {
         wholeList.appendChild(listCard);
     })
 }
+
+    const listArray = [];
+
+    export {listArray};

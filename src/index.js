@@ -4,6 +4,8 @@ import Task from "./taskcreator.js";
 import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle} from "./informationForm.js";
 import { projectsSection } from "./projectSidebar.js";
 import initializeList from "./listCreator.js";
+// import { listArray } from "./listCreator.js";
+import addTask from "./addTask.js";
 
 initializeList();
 
@@ -12,18 +14,4 @@ firstTask.setDescription("I have to buy eggs");
 firstTask.setPriority("Urgent");
 console.log(firstTask);
 
-submitButton.addEventListener("click", () => {
-    event.preventDefault();
-    let titleAnswer = getTitle.value;
-    let dateAnswer = getDate.value;
-    let descriptionAnswer = getDescription.value;
-    let urgentAnswer = getUrgency.checked;
-
-    const task = new Task(titleAnswer, dateAnswer);
-    task.setDescription(descriptionAnswer);
-    task.setPriority(urgentAnswer);
-
-    console.log(task);
-    resetButton.click();
-    
-});
+submitButton.addEventListener("click", addTask);
