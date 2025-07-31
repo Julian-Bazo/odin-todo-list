@@ -3,6 +3,8 @@ import Task from "./taskcreator.js";
 import { listArray } from "./listCreator.js";
 
 export default function addTask() {
+
+    const wholeList = document.querySelector(".list");
     let titleAnswer = getTitle.value;
     let dateAnswer = getDate.value;
     let descriptionAnswer = getDescription.value;
@@ -13,6 +15,17 @@ export default function addTask() {
     task.setPriority(urgentAnswer);
 
     listArray.push(task);
+
+    const listCard = document.createElement("div");
+    if (getDescription.value !== ""){
+        listCard.innerText = `${task.title} by ${task.dueDate} | "${task.description}"`;
+    }
+    else {
+        listCard.innerText = `${task.title} by ${task.dueDate} |`;
+    }
+
+    listCard.classList.add("list-card");
+    wholeList.appendChild(listCard);
 
     console.log(listArray);
     resetButton.click();

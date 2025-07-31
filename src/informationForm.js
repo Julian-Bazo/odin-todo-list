@@ -36,6 +36,7 @@
     titleLabel.for = "title";
     titleLabel.textContent = "*Task Name: ";
     getTitle.type = "text";
+    getTitle.maxLength = "16";
     getTitle.placeholder = "List Item";
 
     titleSection.appendChild(titleLabel);
@@ -48,6 +49,7 @@
     dateLabel.for = "date";
     dateLabel.textContent = "*Date: ";
     getDate.type = "text";
+    getDate.maxLength = "5";
     getDate.placeholder = "MM/DD";
 
     dateSection.appendChild(dateLabel);
@@ -58,7 +60,9 @@
     getDescription.id = "description";
     getDescription.rows = "5";
     getDescription.cols = "33";
-    getDescription.placeholder = "Enter any additional info...";
+    getDescription.maxLength = "60";
+    getDescription.style.resize = "none";
+    getDescription.placeholder = "Enter any additional info...      (60 character max)";
 
     const descriptionLabel = document.createElement("label");
     descriptionLabel.for = "description";
