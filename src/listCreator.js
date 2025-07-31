@@ -1,6 +1,5 @@
 import Task from "./taskcreator.js";
 export default function createList() {
-    console.log("test");
 
     const wholeList = document.querySelector(".list");
 
@@ -20,11 +19,18 @@ export default function createList() {
 
     const sampleTask5 = new Task("Grab veggies", "04/23");
     listArray.push(sampleTask5);
+
+    const sampleTask6 = new Task("Grab veggies", "04/23");
+    listArray.push(sampleTask6);
+
+    const sampleTask7 = new Task("Grab veggies", "04/23");
+    listArray.push(sampleTask7);
     console.log(listArray);
 
     const mappedList = listArray.map((task) => {
         const listCard = document.createElement("div");
         listCard.innerText = `${task.title} by ${task.dueDate}`;
+        listCard.classList.add("list-card");
         wholeList.appendChild(listCard);
     })
 }
