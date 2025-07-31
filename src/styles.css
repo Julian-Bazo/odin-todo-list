@@ -137,6 +137,15 @@ body {
     padding: .2rem
 }
 
+.list-card:hover {
+    text-decoration: line-through black;
+}
+
+.urgent {
+    color: red;
+    font-weight: 700;
+}
+
 button {
     cursor: pointer;
 }

@@ -12,12 +12,6 @@ export default function createList() {
     const sampleTask3 = new Task("Grab fish", "04/23");
     listArray.push(sampleTask3);
 
-    const sampleTask4 = new Task("Grab meat", "04/23");
-    listArray.push(sampleTask4);
-
-    const sampleTask5 = new Task("Grab veggies", "04/23");
-    listArray.push(sampleTask5);
-
     console.log(listArray);
 
     const mappedList = listArray.map((task) => {

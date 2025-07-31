@@ -24,6 +24,10 @@ export default function addTask() {
         listCard.innerText = `${task.title} by ${task.dueDate} |`;
     }
 
+    if (getUrgency.checked === true) {
+        listCard.classList.add("urgent");
+    }
+
     listCard.classList.add("list-card");
     wholeList.appendChild(listCard);
 
