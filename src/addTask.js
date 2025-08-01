@@ -38,6 +38,7 @@ export default function addTask() {
 
 
         listCard.addEventListener("click",() => {
+            listArray.splice(task.ID, 1);
             wholeList.removeChild(listCard);
         })
 

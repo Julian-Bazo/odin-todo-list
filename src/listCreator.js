@@ -20,7 +20,8 @@ export default function createList() {
         listCard.classList.add("list-card");
         wholeList.appendChild(listCard);
         listCard.addEventListener("click",() => {
-        wholeList.removeChild(listCard);
+            listArray.splice(task.ID, 1);
+            wholeList.removeChild(listCard);
         })
     })
 }
