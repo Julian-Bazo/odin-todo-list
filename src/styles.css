@@ -139,6 +139,7 @@ body {
 
 .list-card:hover {
     text-decoration: line-through black;
+    cursor: pointer;
 }
 
 .urgent {

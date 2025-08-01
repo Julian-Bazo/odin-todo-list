@@ -9,9 +9,12 @@ import addTask from "./addTask.js";
 
 initializeList();
 
-const firstTask = new Task("Go to the mall", "Tomorrow");
-firstTask.setDescription("I have to buy eggs");
-firstTask.setPriority("Urgent");
-console.log(firstTask);
-
 submitButton.addEventListener("click", addTask);
+
+// TO DO
+// Remove list items by clicking them
+// Add project functionality -- new array created, old is not deleted
+
+// EXTRA
+// Make it so item description is hidden if the window is minimized even 10%
+// Add a proper date selector

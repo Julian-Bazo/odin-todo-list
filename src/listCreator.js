@@ -19,9 +19,11 @@ export default function createList() {
         listCard.innerText = `${task.title} by ${task.dueDate} |`;
         listCard.classList.add("list-card");
         wholeList.appendChild(listCard);
+        listCard.addEventListener("click",() => {
+        wholeList.removeChild(listCard);
+        })
     })
 }
-
     const listArray = [];
 
     export {listArray};

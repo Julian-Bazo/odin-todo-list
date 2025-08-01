@@ -36,6 +36,11 @@ export default function addTask() {
         listCard.classList.add("list-card");
         wholeList.appendChild(listCard);
 
+
+        listCard.addEventListener("click",() => {
+            wholeList.removeChild(listCard);
+        })
+
         
         resetButton.click();
     }  
