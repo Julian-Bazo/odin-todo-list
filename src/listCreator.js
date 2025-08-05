@@ -1,6 +1,7 @@
 import Task from "./taskcreator.js";
 import "./projectSidebar.js";
 import { defaultProj } from "./projectSidebar.js";
+import displayList from "./displayList.js";
 export default function createList() {
 
     const wholeList = document.querySelector(".list");
@@ -37,19 +38,15 @@ export default function createList() {
     sampleTask3.setDescription("Always snapper.")
     listArray.push(sampleTask3);
 
-    console.log(listArray);
+    displayList(listArray);
 
-    const mappedList = listArray.map((task) => {
-        const listCard = document.createElement("div");
-        listCard.innerText = `${task.title} by ${task.dueDate} | "${task.description}"`;
-        listCard.classList.add("list-card");
-        wholeList.appendChild(listCard);
-        listCard.addEventListener("click",() => {
-            listArray.splice(task.ID, 1);
-            wholeList.removeChild(listCard);
-        })
-    })
 }
     const listArray = [];
+    const listArray2 = [];
+    const listArray3 = [];
+    const listArray4 = [];
+    const listArray5 = [];
+    const listArray6 = [];
 
-    export {listArray};
+
+    export {listArray, listArray2, listArray3, listArray4, listArray5, listArray6};
