@@ -2,6 +2,7 @@ import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle
 import Task from "./taskcreator.js";
 import { listArray } from "./listCreator.js";
 import validateForm from "./addTaskValidation.js";
+import { wholeSidebar, projectsSection, defaultProj, newProj } from "./projectSidebar.js";
 
 export default function addTask() {
 

@@ -100,9 +100,29 @@ body {
 }
 
 .projects-section {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
     margin-top: 5rem;
+    border-bottom: 2px solid black;
+}
+
+.clickable-proj {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.bold-hover:hover {
+    font-weight: 700;
+}
+
+.add-proj {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.645);
     cursor: pointer;
 }
 
@@ -123,11 +143,12 @@ body {
     position: relative;
 }
 
-.list::before {
-    content: "To Do:";
+.list-header {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: -2.5rem;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     border-bottom: 3px solid black;
 }
 

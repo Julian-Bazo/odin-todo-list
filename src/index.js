@@ -1,10 +1,9 @@
 import "./styles.css";
 
-import Task from "./taskcreator.js";
+// import Task from "./taskcreator.js";
 import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle} from "./informationForm.js";
 import { projectsSection } from "./projectSidebar.js";
 import initializeList from "./listCreator.js";
-// import { listArray } from "./listCreator.js";
 import addTask from "./addTask.js";
 
 initializeList();
@@ -12,7 +11,6 @@ initializeList();
 submitButton.addEventListener("click", addTask);
 
 // TO DO
-// Remove list items by clicking them
 // Add project functionality -- new array created, old is not deleted
 
 // EXTRA
