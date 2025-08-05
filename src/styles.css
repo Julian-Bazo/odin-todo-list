@@ -171,3 +171,7 @@ body {
 button {
     cursor: pointer;
 }
+
+.invisible {
+    /* display: none; */
+}
