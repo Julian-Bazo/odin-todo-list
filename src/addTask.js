@@ -43,6 +43,7 @@ export default function addTask() {
             wholeList.removeChild(listCard);
         })
 
+        return wholeList;
         
         resetButton.click();
     }  

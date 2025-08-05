@@ -5,6 +5,7 @@ import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle
 import { projectsSection } from "./projectSidebar.js";
 import initializeList from "./listCreator.js";
 import addTask from "./addTask.js";
+import createProject from "./newProj.js";
 
 initializeList();
 
