@@ -3,15 +3,18 @@ import "./styles.css";
 // import Task from "./taskcreator.js";
 import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle} from "./informationForm.js";
 import { projectsSection } from "./projectSidebar.js";
-import initializeList from "./listCreator.js";
+import createList, { listArray2 } from "./listCreator.js";
 import addTask from "./addTask.js";
-import createProject from "./newProj.js";
 import updateHeader from "./updateHeader.js";
-import projectSelector from "./selectProj.js";
+import { defaultProj, projTwo, projThree, projFour, projFive, projSix } from "./projectSidebar";
 
-projectSelector();
 
-initializeList();
+createList(1);
+
+projTwo.addEventListener("click", () => {
+    console.log(listArray2);
+    createList(2);
+});
 
 submitButton.addEventListener("click", addTask);
 

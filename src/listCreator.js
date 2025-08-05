@@ -1,8 +1,10 @@
-import Task from "./taskcreator.js";
 import "./projectSidebar.js";
 import { defaultProj } from "./projectSidebar.js";
-import displayList from "./displayList.js";
-export default function createList() {
+import projectSelector from "./selectProject.js";
+
+export default function createList(arrayNum) {
+
+    projectSelector(arrayNum);
 
     const wholeList = document.querySelector(".list");
 
@@ -17,7 +19,7 @@ export default function createList() {
     editableHeader.contentEditable = "true";
     listHeader.appendChild(editableHeader);
 
-    const maxLength = 30;
+    // const maxLength = 30; GOTTA DO THIS PART LATER
 
     editableHeader.addEventListener("input", () => {
         defaultProj.textContent = `${editableHeader.textContent}`;
@@ -25,20 +27,6 @@ export default function createList() {
             defaultProj.textContent = "Starter";
         }
     })
-
-    const sampleTask = new Task("Grab eggs", "04/23");
-    sampleTask.setDescription("Make sure to grab organic eggs.")
-    listArray.push(sampleTask);
-
-    const sampleTask2 = new Task("Grab milk", "04/23");
-    sampleTask2.setDescription("Make sure NOT to grab organic milk!");
-    listArray.push(sampleTask2);
-
-    const sampleTask3 = new Task("Grab fish", "04/23");
-    sampleTask3.setDescription("Always snapper.")
-    listArray.push(sampleTask3);
-
-    displayList(listArray);
 
 }
     const listArray = [];
