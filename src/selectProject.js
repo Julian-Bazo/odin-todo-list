@@ -1,13 +1,15 @@
 import { listArray, listArray2, listArray3, listArray4, listArray5, listArray6 } from "./listCreator";
 import defaultListCreation from "./defaultList.js";
-import displayList from "./displayList.js";
+import "./projectSidebar.js";
+import updateList from "./updateList.js";
 
 export default function projectSelector(arrayNum) {
     
-    let currentArray = arrayNum;
+    let currentArray = listArray;
 
     if (arrayNum === 2) {
         currentArray = listArray2;
+        updateList(currentArray);
     }
 
     else if (arrayNum === 3) {
@@ -28,7 +30,7 @@ export default function projectSelector(arrayNum) {
 
     else if (arrayNum === 1) {
         currentArray = listArray;
-        defaultListCreation();
-        displayList(currentArray);
+        updateList(listArray);
     }
+    return currentArray;
 }

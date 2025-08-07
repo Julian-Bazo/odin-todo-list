@@ -1,32 +1,18 @@
 import "./projectSidebar.js";
 import { defaultProj } from "./projectSidebar.js";
 import projectSelector from "./selectProject.js";
+import updateHeader from "./updateHeader.js";
 
 export default function createList(arrayNum) {
 
     projectSelector(arrayNum);
+    let headerTitle = "FIX";
 
     const wholeList = document.querySelector(".list");
 
-    const listHeader = document.createElement("div");
-    listHeader.textContent = `List: `;
-    listHeader.classList.add("list-header");
-    wholeList.appendChild(listHeader);
-
-    const editableHeader = document.createElement("span");
-    editableHeader.textContent = "Starter";
-    editableHeader.classList.add(".editable-header");
-    editableHeader.contentEditable = "true";
-    listHeader.appendChild(editableHeader);
+    updateHeader();
 
     // const maxLength = 30; GOTTA DO THIS PART LATER
-
-    editableHeader.addEventListener("input", () => {
-        defaultProj.textContent = `${editableHeader.textContent}`;
-        if (editableHeader.textContent === "") {
-            defaultProj.textContent = "Starter";
-        }
-    })
 
 }
     const listArray = [];

@@ -1,11 +1,16 @@
 import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle} from "./informationForm.js";
 import Task from "./taskcreator.js";
-import { listArray } from "./listCreator.js";
 import validateForm from "./addTaskValidation.js";
+import projectSelector from "./selectProject.js";
+import { currentArray } from "./index.js";
+import clearList from "./clearList.js";
 import { wholeSidebar, projectsSection, defaultProj, newProj } from "./projectSidebar.js";
 
 export default function addTask() {
 
+    console.log(currentArray);
+    console.log(projectSelector(currentArray));
+    let selectedArray = projectSelector(currentArray);
     const wholeList = document.querySelector(".list");
     let titleAnswer = getTitle.value;
     let dateAnswer = getDate.value;
@@ -20,7 +25,7 @@ export default function addTask() {
         task.setDescription(descriptionAnswer);
         task.setPriority(urgentAnswer);
 
-        listArray.push(task);
+        selectedArray.push(task);
 
         const listCard = document.createElement("div");
         if (getDescription.value !== ""){
@@ -39,13 +44,13 @@ export default function addTask() {
 
 
         listCard.addEventListener("click",() => {
-            listArray.splice(task.ID, 1);
+            selectedArray.splice(task.ID, 1);
             wholeList.removeChild(listCard);
         })
 
-        return wholeList;
-        
         resetButton.click();
+        
+        return wholeList;
     }  
-    console.log(listArray);
+    console.log(selectedArray);
 }
