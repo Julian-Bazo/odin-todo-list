@@ -9,7 +9,6 @@ export default function projectSelector(arrayNum) {
 
     if (arrayNum === 2) {
         currentArray = listArray2;
-        updateList(currentArray);
     }
 
     else if (arrayNum === 3) {
@@ -30,7 +29,7 @@ export default function projectSelector(arrayNum) {
 
     else if (arrayNum === 1) {
         currentArray = listArray;
-        updateList(listArray);
     }
+    updateList(currentArray);
     return currentArray;
 }

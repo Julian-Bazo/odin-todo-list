@@ -22,23 +22,44 @@ projTwo.addEventListener("click", () => {
     createList(2);
 });
 
+projThree.addEventListener("click", () => {
+    currentArray = 3;
+    clearList();
+    createList(3);
+})
+
+projFour.addEventListener("click", () => {
+    currentArray = 4;
+    clearList();
+    createList(4);
+})
+
+projFive.addEventListener("click", () => {
+    currentArray = 5;
+    clearList();
+    createList(5);
+})
+
+projSix.addEventListener("click", () => {
+    currentArray = 6;
+    clearList();
+    createList(6);
+})
+
 submitButton.addEventListener("click", addTask);
 
 
 
 // TO DO
-// Add project functionality -- new array created, old is not deleted
-// Figure out why editableHeader isn`t able to be selected
 // Allow for projects to have name changes
-// Added tasks get added to selected array
+// Add delete project function
 // Array's can be cleared when deleted
 // Utilize max length to prevent long titles
-// Each project will have its own data array that will be saved
 // If a project is deleted it's name will be reverted to "empty" until it's display is set to inline or whatever
 // It's array is also completely emptied out
 
 // CURRENT BUGS
-// Array not updating/removing properly
+// Array not removing properly
     // will have you use a looping slice to remove array items without having a setter
 // Header title not updating when a new proj is selected
     // Move heading code to a custom module
