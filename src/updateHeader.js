@@ -6,6 +6,10 @@ import { currentArray } from ".";
 import selectPlaceHolder from "./selectPlaceholder";
 
 export default function updateHeader() {
+    
+    const old = wholeList.querySelector(".list-header");
+    if (old) old.remove();
+    
     const listHeader = document.createElement("div");
     listHeader.textContent = `List: `;
     listHeader.classList.add("list-header");
@@ -16,6 +20,7 @@ export default function updateHeader() {
     editableHeader.classList.add("editable-header");
     editableHeader.contentEditable = "true";
     listHeader.appendChild(editableHeader);
+    
 
     // const maxLength = 30; COME BACK AND FIX THIS Add ellipses after a certain character count
 
@@ -23,7 +28,9 @@ export default function updateHeader() {
         if (editableHeader.textContent === `${selectPlaceHolder(currentArray)}`) {
             editableHeader.textContent = "";
         }
-    })
+    },
+    { once: true}
+    )
 
     editableHeader.addEventListener("input", () => {
         if (currentArray === 1) {
