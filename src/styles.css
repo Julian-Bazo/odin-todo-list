@@ -172,6 +172,10 @@ button {
     cursor: pointer;
 }
 
+.editable-header {
+   font-style: italic;
+}
+
 .invisible {
-    /* display: none; */
+    display: none;
 }

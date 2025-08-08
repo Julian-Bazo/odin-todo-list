@@ -7,16 +7,26 @@ export default function updateHeader() {
     listHeader.classList.add("list-header");
     wholeList.appendChild(listHeader);
 
+    const placeholderText = "New List";
+ 
     const editableHeader = document.createElement("span");
-    editableHeader.textContent = `FIX`;
-    editableHeader.classList.add(".editable-header");
+    editableHeader.textContent = `${placeholderText}`
+    editableHeader.classList.add("editable-header");
     editableHeader.contentEditable = "true";
     listHeader.appendChild(editableHeader);
 
-        editableHeader.addEventListener("input", () => {
-        defaultProj.textContent = `FIX`;
+    const maxLength = 30;
+
+    editableHeader.addEventListener("focus", () => {
+        if (editableHeader.textContent === placeholderText) {
+            editableHeader.textContent = "";
+        }
+    })
+
+    editableHeader.addEventListener("input", () => {
+        defaultProj.textContent = `${editableHeader.textContent}`;
         if (editableHeader.textContent === "") {
-            defaultProj.textContent = "Add a title!";
+            defaultProj.textContent = "Starter";
         }
     })
 }

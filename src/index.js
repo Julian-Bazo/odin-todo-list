@@ -5,7 +5,10 @@ import createList, { listArray2 } from "./listCreator.js";
 import addTask from "./addTask.js";
 import clearList from "./clearList.js";
 import { defaultProj, projTwo, projThree, projFour, projFive, projSix } from "./projectSidebar";
+import updateHeader from "./updateHeader.js";
 
+
+updateHeader();
 export let currentArray = 1;
 createList(1);
 
