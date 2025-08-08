@@ -13,7 +13,7 @@ wholeSidebar.appendChild(projectsSection);
 const defaultProj = document.createElement("div");
 defaultProj.classList.add("clickable-proj");
 defaultProj.classList.add("bold-hover");
-defaultProj.textContent = "Starter"
+defaultProj.textContent = "Welcome!"
 wholeSidebar.appendChild(defaultProj);
 
 const projTwo = document.createElement("div");
