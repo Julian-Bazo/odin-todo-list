@@ -9,10 +9,9 @@ import updateHeader from "./updateHeader.js";
 import defaultListCreation from "./defaultList.js";
 
 let currentArray = 1;
-updateHeader();
 defaultListCreation();
 createList(1);
-
+updateHeader();
 
 defaultProj.addEventListener("click", () => {
     currentArray = 1
@@ -54,20 +53,27 @@ submitButton.addEventListener("click", addTask);
 export {currentArray};
 
 
+
+// DEVELOPER NOTES //
+
 // TO DO
-// Allow for projects to have name changes
-// Add delete project function
-// Array's can be cleared when deleted
-// Utilize max length to prevent long titles
-// If a project is deleted it's name will be reverted to "empty" until it's display is set to inline or whatever
-// It's array is also completely emptied out
+// Delete project function empty array and DOM items
+// Cut-off sidebar title with "..." if too long
 
 // CURRENT BUGS
 // Array not removing properly
     // will have you use a looping slice to remove array items without having a setter
-// Header title not updating when a new proj is selected
-    // Move heading code to a custom module
 
 // EXTRA
 // Make it so item description is hidden if the window is minimized even 10%
 // Add a proper date selector
+// Add local storage
+
+// OVERALL NOTES
+// If I could do it over again I would make the lists a class and tasks also the same as a class and have them interact
+// as now I have to set a default number of lists without spending too much time fixing my poor code from the start.
+// Although all of that was annoying, having to fix the problems of poor starting code has caused me to learn a very valuable lesson.
+// And my natural trouble-shooting skills have gotten better as a result
+
+// Conclusion
+// Onward and upwards let's keep going
