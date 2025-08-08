@@ -1,3 +1,8 @@
+:root {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
 body {
     background-color: #eee;
     margin: 0rem;
@@ -94,8 +99,10 @@ body {
 }
 
 .username-section {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-align: center;
+    color: rgb(1, 177, 177);
     margin-top: 1rem;
 }
 

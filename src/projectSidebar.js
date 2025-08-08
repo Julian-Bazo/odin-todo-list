@@ -1,7 +1,7 @@
 const wholeSidebar = document.querySelector(".sidebar");
     
 const usernameSection = document.createElement("div");
-usernameSection.textContent = "User Name";
+usernameSection.textContent = "JBaz's Lists";
 usernameSection.classList.add("username-section");
 wholeSidebar.appendChild(usernameSection);
 
