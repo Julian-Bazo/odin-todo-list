@@ -17,34 +17,34 @@ defaultProj.textContent = "Welcome!"
 wholeSidebar.appendChild(defaultProj);
 
 const projTwo = document.createElement("div");
-projTwo.textContent = "New List";
+projTwo.textContent = "New List 2";
 projTwo.classList.add("add-proj");
 projTwo.classList.add("bold-hover")
 wholeSidebar.appendChild(projTwo);
 
 const projThree = document.createElement("div");
-projThree.textContent = "empty";
+projThree.textContent = "New List 3";
 projThree.classList.add("add-proj");
 projThree.classList.add("invisible");
 projThree.classList.add("bold-hover");
 wholeSidebar.appendChild(projThree);
 
 const projFour = document.createElement("div");
-projFour.textContent = "empty";
+projFour.textContent = "New List 4";
 projFour.classList.add("add-proj");
 projFour.classList.add("invisible");
 projFour.classList.add("bold-hover");
 wholeSidebar.appendChild(projFour);
 
 const projFive = document.createElement("div");
-projFive.textContent = "empty";
+projFive.textContent = "New List 5";
 projFive.classList.add("add-proj");
 projFive.classList.add("invisible");
 projFive.classList.add("bold-hover");
 wholeSidebar.appendChild(projFive);
 
 const projSix = document.createElement("div");
-projSix.textContent = "empty";
+projSix.textContent = "New List 6";
 projSix.classList.add("add-proj");
 projSix.classList.add("invisible");
 projSix.classList.add("bold-hover");

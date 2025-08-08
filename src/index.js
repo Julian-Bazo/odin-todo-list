@@ -6,10 +6,13 @@ import addTask from "./addTask.js";
 import clearList from "./clearList.js";
 import { defaultProj, projTwo, projThree, projFour, projFive, projSix } from "./projectSidebar";
 import updateHeader from "./updateHeader.js";
+import defaultListCreation from "./defaultList.js";
 
 let currentArray = 1;
 updateHeader();
+defaultListCreation();
 createList(1);
+
 
 defaultProj.addEventListener("click", () => {
     currentArray = 1
