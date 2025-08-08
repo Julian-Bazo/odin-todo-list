@@ -1,18 +1,12 @@
 import "./projectSidebar.js";
-import { defaultProj } from "./projectSidebar.js";
 import projectSelector from "./selectProject.js";
 import updateHeader from "./updateHeader.js";
 
 export default function createList(arrayNum) {
 
     projectSelector(arrayNum);
-    let headerTitle = "FIX";
-
-    const wholeList = document.querySelector(".list");
 
     updateHeader();
-
-    // const maxLength = 30; GOTTA DO THIS PART LATER
 
 }
     const listArray = [];

@@ -1,18 +1,18 @@
 const wholeList = document.querySelector(".list");
+export {wholeList};
 import { defaultProj, projTwo, projThree, projFour, projFive, projSix } from "./projectSidebar";
 import { headerArray } from "./clearList";
 import { currentArray } from ".";
+import selectPlaceHolder from "./selectPlaceholder";
 
 export default function updateHeader() {
     const listHeader = document.createElement("div");
     listHeader.textContent = `List: `;
     listHeader.classList.add("list-header");
     wholeList.appendChild(listHeader);
-
-    const placeholderText = "New List";
  
     const editableHeader = document.createElement("span");
-    editableHeader.textContent = `${placeholderText}`
+    editableHeader.textContent = `${selectPlaceHolder(currentArray)}`
     editableHeader.classList.add("editable-header");
     editableHeader.contentEditable = "true";
     listHeader.appendChild(editableHeader);
@@ -20,7 +20,7 @@ export default function updateHeader() {
     // const maxLength = 30; COME BACK AND FIX THIS Add ellipses after a certain character count
 
     editableHeader.addEventListener("focus", () => {
-        if (editableHeader.textContent === placeholderText) {
+        if (editableHeader.textContent === `${selectPlaceHolder(currentArray)}`) {
             editableHeader.textContent = "";
         }
     })

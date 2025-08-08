@@ -1,15 +1,14 @@
 import "./styles.css";
 
-import {resetButton, submitButton, getUrgency, getDescription, getDate, getTitle} from "./informationForm.js";
-import createList, { listArray2 } from "./listCreator.js";
+import {submitButton} from "./informationForm.js";
+import createList from "./listCreator.js";
 import addTask from "./addTask.js";
 import clearList from "./clearList.js";
 import { defaultProj, projTwo, projThree, projFour, projFive, projSix } from "./projectSidebar";
 import updateHeader from "./updateHeader.js";
 
-
+let currentArray = 1;
 updateHeader();
-export let currentArray = 1;
 createList(1);
 
 defaultProj.addEventListener("click", () => {
@@ -19,7 +18,6 @@ defaultProj.addEventListener("click", () => {
 })
 
 projTwo.addEventListener("click", () => {
-    console.log(listArray2);
     currentArray = 2;
     clearList();
     createList(2);
@@ -50,7 +48,7 @@ projSix.addEventListener("click", () => {
 })
 
 submitButton.addEventListener("click", addTask);
-
+export {currentArray};
 
 
 // TO DO
