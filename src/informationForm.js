@@ -70,7 +70,6 @@
 
     const getUrgency = document.createElement("input");
     getUrgency.type = "checkbox";
-    getUrgency.name = "urgent";
     getUrgency.id = "urgent";
     getUrgency.value = "urgent";
 
@@ -97,5 +96,10 @@
     resetButton.classList.add("reset-button");
     buttonSection.appendChild(resetButton);
     resetButton.type = "reset";
+
+    const clearListButton = document.createElement("button");
+    clearListButton.textContent = "Clear Selected Project";
+    clearListButton.classList.add("clear-list-button");
+    contentContainer.appendChild(clearListButton);
 
     export { resetButton, submitButton, urgencyLabel, getUrgency, descriptionLabel, getDescription, dateLabel, getDate, titleLabel, getTitle, buttonSection, urgencySection, dateSection, titleSection, descriptionSection, formHeader};

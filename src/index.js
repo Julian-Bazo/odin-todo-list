@@ -58,7 +58,6 @@ export {currentArray};
 
 // TO DO
 // Delete project function empty array and DOM items
-// Cut-off sidebar title with "..." if too long
 
 // CURRENT BUGS
 // Array not removing properly
